@@ -41,7 +41,6 @@ export default class TodayCard extends React.Component<
       Squall: "wind",
       Tornado: "tornado",
     };
-    console.log("FF", RunTimeTemperature[2][0]);
     return (
       <div className="todayContainer">
         <h3>Today </h3>

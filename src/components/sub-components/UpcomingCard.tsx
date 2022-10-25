@@ -45,12 +45,12 @@ export default class UpcomingCard extends React.Component<
     return (
       <div className="upcomingContainer flex">
         {RunTimeTemperature.map((e: any, i: any) => {
-          const date = weekday[new Date(e.dt_txt).getDay()];
+          const date = weekday[new Date(e.dt_txt.split(" ")[0]).getDay()];
           return (
             i !== 0 &&
             i < 5 && (
               <div key={i} className="upcoming-card">
-                <h3>{date.toString()}</h3>
+                <h3>{date ? date.toString() : "abc"}</h3>
                 <FontAwesomeIcon icon={["fas", iconList[e.weather[0].main]]} />
 
                 <span>{e.main.temp}&#176;</span>
